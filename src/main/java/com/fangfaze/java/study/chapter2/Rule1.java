@@ -1,9 +1,9 @@
-package com.fangfaze.java.study;
+package com.fangfaze.java.study.chapter2;
 
-import com.fangfaze.java.study.rule1_3.ENUM;
-import com.fangfaze.java.study.rule1_3.ENUM_BIG;
-import com.fangfaze.java.study.rule1_4.Service;
-import com.fangfaze.java.study.rule1_4.Services;
+import com.fangfaze.java.study.chapter2.rule1_3.ENUM;
+import com.fangfaze.java.study.chapter2.rule1_3.ENUM_BIG;
+import com.fangfaze.java.study.chapter2.rule1_4.Service;
+import com.fangfaze.java.study.chapter2.rule1_4.Services;
 
 import java.util.*;
 

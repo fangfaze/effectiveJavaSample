@@ -1,4 +1,4 @@
-package com.fangfaze.java.study.rule1_4;
+package com.fangfaze.java.study.chapter2.rule1_4;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

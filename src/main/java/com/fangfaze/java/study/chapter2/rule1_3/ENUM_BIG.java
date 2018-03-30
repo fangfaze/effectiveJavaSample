@@ -1,4 +1,4 @@
-package com.fangfaze.java.study.rule1_3;
+package com.fangfaze.java.study.chapter2.rule1_3;
 
 public enum ENUM_BIG {
     A0, A1, A2, A3, A4, A5, A6, A7, A8, A9,

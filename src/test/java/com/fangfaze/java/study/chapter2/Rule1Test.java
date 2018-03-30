@@ -1,5 +1,6 @@
-package com.fangfaze.java.study;
+package com.fangfaze.java.study.chapter2;
 
+import com.fangfaze.java.study.chapter2.Rule1;
 import org.junit.Test;
 
 /**
