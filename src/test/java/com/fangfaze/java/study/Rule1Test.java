@@ -1,8 +1,6 @@
 package com.fangfaze.java.study;
 
 import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
 
 /**
  * Rule1 Tester.
@@ -20,6 +18,11 @@ public class Rule1Test {
     @Test
     public void testExample3() throws Exception {
         Rule1.example3();
+    }
+
+    @Test
+    public void testExample4() throws Exception {
+        Rule1.example4();
     }
 
 
