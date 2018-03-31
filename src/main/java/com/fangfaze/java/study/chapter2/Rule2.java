@@ -1,6 +1,6 @@
 package com.fangfaze.java.study.chapter2;
 
-import com.alibaba.fastjson.JSONObject;
+
 import com.fangfaze.java.study.chapter2.rule2.BuilderPattern;
 import com.fangfaze.java.study.chapter2.rule2.JavaBeans;
 import com.fangfaze.java.study.chapter2.rule2.MultiConstructor;
@@ -13,9 +13,9 @@ public class Rule2 {
     public static void example1() {
 
         // 多个构造函数
-        System.out.println(new MultiConstructor(1,2).toString());
-        System.out.println(new MultiConstructor(1,2,1).toString());
-        System.out.println(new MultiConstructor(1,2,1,99).toString());
+        System.out.println(new MultiConstructor(1, 2).toString());
+        System.out.println(new MultiConstructor(1, 2, 1).toString());
+        System.out.println(new MultiConstructor(1, 2, 1, 99).toString());
 
         // Java Bean方式
         JavaBeans jb1 = new JavaBeans();
@@ -37,9 +37,9 @@ public class Rule2 {
         System.out.println(jb3.toString());
 
         //Builder模式
-        System.out.println(new BuilderPattern.Builder(3,4).build().toString());
-        System.out.println(new BuilderPattern.Builder(3,4).optional1(100).build().toString());
-        System.out.println(new BuilderPattern.Builder(3,4).optional1(100).optional2(9999).build().toString());
+        System.out.println(new BuilderPattern.Builder(3, 4).build().toString());
+        System.out.println(new BuilderPattern.Builder(3, 4).optional1(100).build().toString());
+        System.out.println(new BuilderPattern.Builder(3, 4).optional1(100).optional2(9999).build().toString());
 
 
     }
