@@ -4,7 +4,6 @@ import com.fangfaze.java.study.chapter2.rule3.Singleton1;
 import com.fangfaze.java.study.chapter2.rule3.Singleton2;
 import com.fangfaze.java.study.chapter2.rule3.Singleton3;
 import com.fangfaze.java.study.chapter2.rule3.SingletonLazy;
-import sun.jvm.hotspot.debugger.ThreadAccess;
 
 import java.io.*;
 import java.lang.reflect.Constructor;
@@ -86,6 +85,7 @@ public class Rule3 {
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
         Singleton1 s2 = (Singleton1) ois.readObject();
         //判断是否是同一个对象
+        file.delete();
         System.out.println(s1.toString() + " : " + s2.toString());
     }
 
