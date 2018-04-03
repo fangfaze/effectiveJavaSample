@@ -1,32 +1,25 @@
 package com.fangfaze.java.study.chapter2;
 
+
+import com.fangfaze.java.study.chapter2.rule4.Rule4Example;
+
+//public class Rule4 extends Rule4Example {
 public class Rule4 {
     /**
      * 第四条: 通过私有构造器来强化不可实例化能力
      */
-
     // 不可被实例化
     // 不可继承
     //Rule4Example r4s = new Rule4Example();
-
-
-}
-
-class Rule4Example {
-
-    /**
-     * 通过私有构造器来强化不可实例化能力
-     */
-    private Rule4Example() {
-        //该Rule4类被设置成不可实例化
-        throw new AssertionError();
+    public static void example1() {
+//        Rule4Example rule4Example = new Rule4Example();
+        Rule4Example.hello();
     }
 }
 
-//class Rule4ExampleChild extends Rule4Example{
+//class Rule4ExampleChild{
 //
 //}
-
 
 /**
  * 思考:
