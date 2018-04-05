@@ -8,7 +8,7 @@ import java.util.WeakHashMap;
 public class Rule6 {
 
     /**
-     * 消除过期对象的引用
+     * 第六条: 消除过期对象的引用
      * 常见的: 1收缩的数组,2缓存,3注册的observer
      */
 
