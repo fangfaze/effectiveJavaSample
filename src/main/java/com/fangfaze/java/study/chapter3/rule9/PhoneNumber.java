@@ -21,4 +21,10 @@ public class PhoneNumber {
         return this.phoneNumber.equals(((PhoneNumber) o).phoneNumber);
     }
 
+    // 如果提供的格式,
+    @Override
+    public String toString() {
+        return "(" + id + ")" + phoneNumber;
+    }
+
 }

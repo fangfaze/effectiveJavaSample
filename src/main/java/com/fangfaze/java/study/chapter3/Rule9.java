@@ -9,6 +9,9 @@ public class Rule9 {
     /**
      * 第九条: 重写equals时必须同时重写hashCode
      */
+    /**
+     * 第十条: 始终重写toString
+     */
 
     public static void example1() {
         PhoneNumber p1 = new PhoneNumber(1, "1300000001");
