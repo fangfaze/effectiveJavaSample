@@ -37,6 +37,7 @@ public class Rule11Test {
         Set<String> map = new HashSet<>();
         map.add("a");
         map.add("b");
+        // todo 用拷贝工厂实现HashSet转换TreeSet
 
     }
 } 
