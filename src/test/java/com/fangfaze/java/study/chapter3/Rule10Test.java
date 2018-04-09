@@ -5,11 +5,8 @@ import com.fangfaze.java.study.chapter3.rule9.PhoneNumber;
 import org.junit.Test;
 
 /**
- * Rule9 Tester.
+ * Rule10 Tester.
  *
- * @author <Authors name>
- * @version 1.0
- * @since <pre>04/07/2018</pre>
  */
 public class Rule10Test {
 

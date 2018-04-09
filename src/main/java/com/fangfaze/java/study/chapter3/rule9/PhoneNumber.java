@@ -1,6 +1,6 @@
 package com.fangfaze.java.study.chapter3.rule9;
 
-public class PhoneNumber {
+public class PhoneNumber implements Cloneable {
 
     private final int id;
     private final String phoneNumber;
@@ -21,10 +21,20 @@ public class PhoneNumber {
         return this.phoneNumber.equals(((PhoneNumber) o).phoneNumber);
     }
 
-    // 如果提供的格式,
+    // rule10
     @Override
     public String toString() {
         return "(" + id + ")" + phoneNumber;
+    }
+
+    // rule11
+    @Override
+    public PhoneNumber clone() {
+        try {
+            return (PhoneNumber) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 
 }
