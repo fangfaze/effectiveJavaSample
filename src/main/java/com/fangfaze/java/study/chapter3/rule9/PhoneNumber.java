@@ -1,6 +1,6 @@
 package com.fangfaze.java.study.chapter3.rule9;
 
-public class PhoneNumber implements Cloneable {
+public class PhoneNumber implements Cloneable, Comparable<PhoneNumber> {
 
     private final int id;
     private final String phoneNumber;
@@ -21,6 +21,11 @@ public class PhoneNumber implements Cloneable {
         return this.phoneNumber.equals(((PhoneNumber) o).phoneNumber);
     }
 
+    @Override
+    public int hashCode() {
+        return phoneNumber.hashCode();
+    }
+
     // rule10
     @Override
     public String toString() {
@@ -37,4 +42,8 @@ public class PhoneNumber implements Cloneable {
         }
     }
 
+    @Override
+    public int compareTo(PhoneNumber phoneNumber) {
+        return id - phoneNumber.id;
+    }
 }
