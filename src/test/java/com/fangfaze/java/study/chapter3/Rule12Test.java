@@ -10,7 +10,8 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * 第11条 谨慎的重写clone
+ * 第12条 考虑实现Comparable接口
+ * 注意,一般的DoCompare() 返回0 是 通常 equals() 返回true
  */
 public class Rule12Test {
 
