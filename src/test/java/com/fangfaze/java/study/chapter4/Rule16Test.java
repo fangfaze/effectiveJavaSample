@@ -11,10 +11,6 @@ public class Rule16Test {
     /**
      * 第16条 复合优先于继承
      */
-    // 复合类有时需要
-    // 在回调
-
-
 
     @Test
     public void testExample16() {
