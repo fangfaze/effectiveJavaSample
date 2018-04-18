@@ -14,4 +14,8 @@ public class Sub extends Super {
         System.out.println(date);
     }
 
+    @Override
+    public void look() {
+        System.out.println("(sub)look out!");
+    }
 }
