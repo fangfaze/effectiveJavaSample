@@ -1,4 +1,4 @@
-package com.fangfaze.java.study.chaptere4;
+package com.fangfaze.java.study.chapter4;
 
 public class Complex {
     public Complex(double re, double im) {

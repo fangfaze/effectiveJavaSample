@@ -1,10 +1,7 @@
 package com.fangfaze.java.study.chapter4;
 
-import com.fangfaze.java.study.chaptere4.CompositionHashSet;
-import com.fangfaze.java.study.chaptere4.InheritanceHashSet;
 import org.junit.Test;
 
-import java.math.BigInteger;
 import java.util.Arrays;
 
 public class Rule16Test {

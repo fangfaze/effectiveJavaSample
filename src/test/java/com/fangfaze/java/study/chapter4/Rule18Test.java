@@ -1,11 +1,8 @@
 package com.fangfaze.java.study.chapter4;
 
-import com.fangfaze.java.study.chaptere4.*;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * 第18条 接口优于抽象类
@@ -44,5 +41,17 @@ public class Rule18Test {
         Arrays.sort(list, StringComparator.COMPARATOR);
         System.out.println(Arrays.toString(list));
     }
+
+    /**
+     * 第22条 优先考虑静态成员类
+     */
+
+    @Test
+    public void textExaple22() {
+        OuterClass.i1.call();
+        new OuterClass(88).i2.call();
+        new OuterClass(99).call();
+    }
+
 
 }
