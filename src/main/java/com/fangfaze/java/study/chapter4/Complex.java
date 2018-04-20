@@ -1,6 +1,8 @@
 package com.fangfaze.java.study.chapter4;
 
 public class Complex {
+    public static final Complex I = new Complex(0, 1d);
+
     public Complex(double re, double im) {
         this.re = re;
         this.im = im;
