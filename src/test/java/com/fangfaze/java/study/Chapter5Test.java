@@ -20,8 +20,12 @@ public class Chapter5Test {
         collection.add(Complex.I);
 
         List<String> l1 = new ArrayList<>();
-        unsafeAdd(l1, new Sub());
-        String o = (String) unsafeGet(l1);
+        unsafeAdd(l1, new Sub());˚
+        try {
+            String o = (String) unsafeGet(l1);
+        } catch (ClassCastException e) {
+            System.out.println("ClassCastException");
+        }
 
 
     }
