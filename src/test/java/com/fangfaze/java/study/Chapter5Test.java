@@ -20,18 +20,28 @@ public class Chapter5Test {
         collection.add(Complex.I);
 
         List<String> l1 = new ArrayList<>();
-        unsafeAdd(l1, new Sub());˚
+        unsafeAdd(l1, new Sub());
         try {
             String o = (String) unsafeGet(l1);
         } catch (ClassCastException e) {
             System.out.println("ClassCastException");
         }
 
+    }
+
+    /**
+     * 第24条 消除非受检警告
+     */
+
+    @Test
+    public void testRule24() {
+        Set<Sub> set = new HashSet();
 
     }
 
     private void unsafeAdd(List list, Object o) {
         list.add(o);
+
     }
 
     private Object unsafeGet(List<? extends Object> list) {
