@@ -3,8 +3,10 @@ package com.fangfaze.java.study;
 import com.fangfaze.java.study.chapter4.Complex;
 import com.fangfaze.java.study.chapter4.Sub;
 import com.fangfaze.java.study.chapter4.Super;
+import com.fangfaze.java.study.chapter5.GenericFactory;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Chapter5Test {
@@ -27,7 +29,6 @@ public class Chapter5Test {
         } catch (ClassCastException e) {
             System.out.println("ClassCastException");
         }
-
     }
 
     /**
@@ -40,6 +41,9 @@ public class Chapter5Test {
 
     }
 
+    /**
+     * 第25条 列表优于数组
+     */
     @Test
     public void testRule25() {
         Sub[] subs = new Sub[1];
@@ -56,7 +60,43 @@ public class Chapter5Test {
         List<?>[] listList = new List<?>[2];
         listList[0] = subList;
         listList[1] = superList;
+
     }
+
+    /**
+     * 第26条 优先考虑泛型
+     */
+    @Test
+    public void testRule26() {
+        List<String> list = new ArrayList<>();
+        Map<String, String> map = new HashMap<>();
+    }
+
+    /***
+     * 第27条 优先考虑泛型方法
+     */
+    @Test
+    public void testRule27() {
+        List<Integer> list1 = new ArrayList<>(Arrays.asList(1, 2, 3));
+        List<Integer> list2 = new ArrayList<>(Arrays.asList(4, 5, 6));
+        List<Integer> list3 = testAdd(list1, list2);
+
+        System.out.println(Arrays.toString(list1.toArray()));
+        System.out.println(Arrays.toString(list2.toArray()));
+        System.out.println(Arrays.toString(list3.toArray()));
+
+        GenericFactory<String> genericFactory = () -> "1";
+        System.out.println(genericFactory.get());
+
+
+    }
+
+    private <E> List<E> testAdd(final List<E> list1, final List<E> list2) {
+        List<E> list = new ArrayList<>(list1);
+        list.addAll(list2);
+        return list;
+    }
+
 
     private void unsafeAdd(List list, Object o) {
         list.add(o);
