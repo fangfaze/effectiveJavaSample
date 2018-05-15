@@ -4,6 +4,7 @@ import com.fangfaze.java.study.chapter4.Complex;
 import com.fangfaze.java.study.chapter4.Sub;
 import com.fangfaze.java.study.chapter4.Super;
 import com.fangfaze.java.study.chapter5.GenericFactory;
+import com.fangfaze.java.study.chapter5.MyStack;
 import org.junit.Test;
 
 import java.lang.reflect.Array;
@@ -88,8 +89,24 @@ public class Chapter5Test {
         GenericFactory<String> genericFactory = () -> "1";
         System.out.println(genericFactory.get());
 
+    }
+
+    /**
+     * 第28条 利用有限制通配符来提升API的灵活性
+     */
+
+    @Test
+    public void testRule28() {
+        MyStack<Number> numberMyStack = new MyStack<>();
+        List<Integer> list = new LinkedList<>(Arrays.asList(1, 2, 3));
+        numberMyStack.pushAll(list);
+
+        List<Object> list1 = new LinkedList<>();
+        numberMyStack.popAll(list1);
+
 
     }
+
 
     private <E> List<E> testAdd(final List<E> list1, final List<E> list2) {
         List<E> list = new ArrayList<>(list1);
