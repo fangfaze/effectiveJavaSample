@@ -2,6 +2,8 @@ package com.fangfaze.java.study.chapter4;
 
 import jdk.internal.dynalink.beans.StaticClass;
 
+import java.util.LinkedList;
+
 public class OuterClass {
     private final int id;
 

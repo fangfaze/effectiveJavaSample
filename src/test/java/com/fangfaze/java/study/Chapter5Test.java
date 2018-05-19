@@ -3,11 +3,11 @@ package com.fangfaze.java.study;
 import com.fangfaze.java.study.chapter4.Complex;
 import com.fangfaze.java.study.chapter4.Sub;
 import com.fangfaze.java.study.chapter4.Super;
+import com.fangfaze.java.study.chapter5.Favorites;
 import com.fangfaze.java.study.chapter5.GenericFactory;
 import com.fangfaze.java.study.chapter5.MyStack;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Chapter5Test {
@@ -104,6 +104,25 @@ public class Chapter5Test {
         List<Object> list1 = new LinkedList<>();
         numberMyStack.popAll(list1);
 
+
+    }
+
+    /**
+     * 第29条 优先考虑类型安全的异构容器
+     */
+
+    @Test
+    public void testRule29() {
+        Favorites favorites = new Favorites();
+        favorites.put(Integer.class, 123);
+        favorites.put(String.class, "123");
+
+        Class clazz = Float.class;
+//        favorites.put(clazz, "aa");
+
+        System.out.println(favorites.get(Integer.class));
+        System.out.println(favorites.get(String.class));
+        System.out.println(favorites.get(clazz));
 
     }
 
