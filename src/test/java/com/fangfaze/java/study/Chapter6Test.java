@@ -1,7 +1,14 @@
 package com.fangfaze.java.study;
 
 
+import com.fangfaze.java.study.chapter6.Weekday;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static com.fangfaze.java.study.chapter6.Weekday.*;
 
 public class Chapter6Test {
 
@@ -40,11 +47,19 @@ public class Chapter6Test {
      */
     @Test
     public void testRule30() {
-        Color a = Color.RED;
+        Color a = Color.valueOf("RED");
         if (a == Color.RED) {
             System.out.println("yes");
         }
+        System.out.println(a.name());
         System.out.println(a.myName());
+
+
+        List<Weekday> list = new ArrayList<>(Arrays.asList(WENDESDAY, MONDAY, SUNDAY, THURSDAY));
+        for (Weekday weekday : list) {
+            System.out.println(weekday.percent());
+        }
+
 
     }
 
