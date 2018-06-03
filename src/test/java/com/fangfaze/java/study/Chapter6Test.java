@@ -1,13 +1,15 @@
 package com.fangfaze.java.study;
 
 
+import com.fangfaze.java.study.chapter6.Elemnet;
+import com.fangfaze.java.study.chapter6.Month;
 import com.fangfaze.java.study.chapter6.Weekday;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
+import static com.fangfaze.java.study.chapter6.Elemnet.木;
+import static com.fangfaze.java.study.chapter6.Month.*;
 import static com.fangfaze.java.study.chapter6.Weekday.*;
 
 public class Chapter6Test {
@@ -62,6 +64,65 @@ public class Chapter6Test {
 
 
     }
+
+    /**
+     * 第31条 用实例域代替叙述
+     */
+    @Test
+    public void testRule31() {
+        System.out.println(SEPTEMBER.daysOfMonth());
+    }
+
+
+    /**
+     * 第32条 用EnumSet代替位域
+     */
+
+    @Test
+    public void testRule32() {
+        class Season {
+            public int daysOfSeason() {
+                return days;
+            }
+
+            private final int days;
+
+            Season(Set<Month> months) {
+                int days = 0;
+                for (Month month : months) {
+                    days += month.daysOfMonth();
+                }
+                this.days = days;
+            }
+
+        }
+
+        Season spring = new Season(EnumSet.of(MATCH, APRIL, MAY));
+
+        Set<Month> autumnMonths = new HashSet<>(Arrays.asList(SEPTEMBER, OCTOBER, NOVEMBER));
+
+        System.out.println(spring.daysOfSeason());
+        System.out.println(new Season(autumnMonths).daysOfSeason());
+    }
+
+    /**
+     * 第33条 用EnumMap代替序数索引
+     */
+    @Test
+    public void testRule33() {
+        Map<Month, Integer> map = new EnumMap<>(Month.class);
+        for (Month month : Month.values()) {
+            map.put(month, month.daysOfMonth());
+        }
+        map.forEach((k, v) -> System.out.println(v));
+
+
+        System.out.println(Elemnet.mix(Elemnet.木,Elemnet.目));
+        System.out.println(Elemnet.mix(Elemnet.木,Elemnet.木));
+        System.out.println(Elemnet.mix(Elemnet.木,Elemnet.水));
+
+    }
+
 
 
 }
