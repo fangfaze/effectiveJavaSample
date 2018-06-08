@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import java.util.*;
 
-import static com.fangfaze.java.study.chapter6.Elemnet.木;
 import static com.fangfaze.java.study.chapter6.Month.*;
 import static com.fangfaze.java.study.chapter6.Weekday.*;
 
@@ -70,7 +69,7 @@ public class Chapter6Test {
      */
     @Test
     public void testRule31() {
-        System.out.println(SEPTEMBER.daysOfMonth());
+        System.out.println(SEPTEMBER.getDays());
     }
 
 
@@ -90,7 +89,7 @@ public class Chapter6Test {
             Season(Set<Month> months) {
                 int days = 0;
                 for (Month month : months) {
-                    days += month.daysOfMonth();
+                    days += month.getDays();
                 }
                 this.days = days;
             }
@@ -112,17 +111,25 @@ public class Chapter6Test {
     public void testRule33() {
         Map<Month, Integer> map = new EnumMap<>(Month.class);
         for (Month month : Month.values()) {
-            map.put(month, month.daysOfMonth());
+            map.put(month, month.getDays());
         }
         map.forEach((k, v) -> System.out.println(v));
 
 
-        System.out.println(Elemnet.mix(Elemnet.木,Elemnet.目));
-        System.out.println(Elemnet.mix(Elemnet.木,Elemnet.木));
-        System.out.println(Elemnet.mix(Elemnet.木,Elemnet.水));
+        System.out.println(Elemnet.mix(Elemnet.木, Elemnet.目));
+        System.out.println(Elemnet.mix(Elemnet.木, Elemnet.木));
+        System.out.println(Elemnet.mix(Elemnet.木, Elemnet.水));
 
     }
 
+    /**
+     * 第34条 用接口模拟可伸缩的枚举
+     */
+
+    @Test
+    public void testRule34() {
+
+    }
 
 
 }

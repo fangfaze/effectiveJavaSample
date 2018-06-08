@@ -1,6 +1,6 @@
 package com.fangfaze.java.study.chapter6;
 
-public enum Month {
+public enum Month implements Somedays{
     JANUARY(31),
     FEBEUARY(28),
     MATCH(31),
@@ -20,7 +20,9 @@ public enum Month {
         this.days = days;
     }
 
-    public int daysOfMonth() {
+    public int getDays() {
         return days;
     }
+
+
 }
