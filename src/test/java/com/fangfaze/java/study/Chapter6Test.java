@@ -1,9 +1,7 @@
 package com.fangfaze.java.study;
 
 
-import com.fangfaze.java.study.chapter6.Elemnet;
-import com.fangfaze.java.study.chapter6.Month;
-import com.fangfaze.java.study.chapter6.Weekday;
+import com.fangfaze.java.study.chapter6.*;
 import org.junit.Test;
 
 import java.util.*;
@@ -128,6 +126,25 @@ public class Chapter6Test {
 
     @Test
     public void testRule34() {
+        showDays(Month.class);
+        showDays(Season.class);
+
+        showDays1(Month.values());
+        showDays1(Season.values());
+
+    }
+
+    private <T extends Enum<T> & Somedays> void showDays(Class<T> clazz) {
+        for (Somedays somedays : clazz.getEnumConstants()) {
+            System.out.println(somedays.toString() + ":" + somedays.getDays());
+        }
+
+    }
+
+    private <T extends Somedays> void showDays1(T[] list) {
+        for (Somedays somedays : list) {
+            System.out.println(somedays.toString() + ":" + somedays.getDays());
+        }
 
     }
 

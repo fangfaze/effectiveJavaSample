@@ -2,7 +2,7 @@ package com.fangfaze.java.study.chapter6;
 
 public enum Month implements Somedays{
     JANUARY(31),
-    FEBEUARY(28),
+    FEBRUARY(28),
     MATCH(31),
     APRIL(30),
     MAY(31),
