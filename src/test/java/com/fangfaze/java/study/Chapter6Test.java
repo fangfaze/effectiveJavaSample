@@ -9,6 +9,7 @@ import java.util.*;
 import static com.fangfaze.java.study.chapter6.Month.*;
 import static com.fangfaze.java.study.chapter6.Weekday.*;
 
+@MyAtInterface
 public class Chapter6Test {
 
     enum Color {
@@ -144,6 +145,19 @@ public class Chapter6Test {
     private <T extends Somedays> void showDays1(T[] list) {
         for (Somedays somedays : list) {
             System.out.println(somedays.toString() + ":" + somedays.getDays());
+        }
+
+    }
+
+    /**
+     * 第35条 注解优先于命名方式
+     */
+
+    @Test
+    public void testRule35() {
+        Class<?> clazz = this.getClass();
+        if(clazz.isAnnotationPresent(MyAtInterface.class)){
+            System.out.println("Annotation class!");
         }
 
     }
