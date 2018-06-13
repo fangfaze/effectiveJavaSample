@@ -161,6 +161,16 @@ public class Chapter6Test {
         }
 
     }
+    /**
+     * 第36条 坚持使用@Override
+     */
+
+    @Test
+    public void testRule36() {
+
+    }
+
+
 
 
 }

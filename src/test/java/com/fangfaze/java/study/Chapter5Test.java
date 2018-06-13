@@ -123,15 +123,6 @@ public class Chapter5Test {
         System.out.println(favorites.get(clazz));
     }
 
-    /**
-     * 第30条 坚持使用@Override
-     */
-
-    @Test
-    public void testRule30() {
-
-    }
-
 
     @Test
     public void testSomeGenericHelper() {
