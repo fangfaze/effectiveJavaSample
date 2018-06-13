@@ -3,9 +3,7 @@ package com.fangfaze.java.study;
 import com.fangfaze.java.study.chapter4.Complex;
 import com.fangfaze.java.study.chapter4.Sub;
 import com.fangfaze.java.study.chapter4.Super;
-import com.fangfaze.java.study.chapter5.Favorites;
-import com.fangfaze.java.study.chapter5.GenericFactory;
-import com.fangfaze.java.study.chapter5.MyStack;
+import com.fangfaze.java.study.chapter5.*;
 import org.junit.Test;
 
 import java.util.*;
@@ -123,7 +121,13 @@ public class Chapter5Test {
         System.out.println(favorites.get(Integer.class));
         System.out.println(favorites.get(String.class));
         System.out.println(favorites.get(clazz));
+    }
 
+
+    @Test
+    public void testSomeGenericHelper() {
+        SomeGeneric<String> someString = SomeGenericHelper.make("abc");
+        SomeGeneric<Entity> someIntger = SomeGenericHelper.make(new Entity());
     }
 
 

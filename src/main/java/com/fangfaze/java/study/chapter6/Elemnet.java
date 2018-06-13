@@ -7,14 +7,14 @@ import java.util.Set;
 public enum Elemnet {
     木, 目, 水;
 
-    public enum Composite {
+    enum Composite {
         林(木, 木),
         相(木, 目),
         沐(水, 木),
         泪(水, 目);
 
-        private Elemnet left;
-        private Elemnet right;
+        final private Elemnet left;
+        final private Elemnet right;
 
         Composite(Elemnet left, Elemnet right) {
             this.left = left;
