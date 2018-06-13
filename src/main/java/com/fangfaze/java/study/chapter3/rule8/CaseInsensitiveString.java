@@ -22,4 +22,8 @@ public final class CaseInsensitiveString {
         return false;
     }
 
+    public boolean equals(CaseInsensitiveString other) {
+        return false;
+    }
+
 }
