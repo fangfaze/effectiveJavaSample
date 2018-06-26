@@ -170,6 +170,15 @@ public class Chapter6Test {
 
     }
 
+    /**
+     * 第37条 用标记接口定义类型
+     */
+
+    @Test
+    public void testRule37() {
+
+    }
+
 
 
 

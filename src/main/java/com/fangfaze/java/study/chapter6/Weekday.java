@@ -30,8 +30,6 @@ public enum Weekday {
                 return 100;
             }
         };
-
         abstract int percent();
-
     }
 }
