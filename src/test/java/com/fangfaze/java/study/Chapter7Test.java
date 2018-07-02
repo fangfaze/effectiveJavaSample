@@ -32,4 +32,13 @@ public class Chapter7Test {
 
         System.out.println(period.getStart().toString() + "==>" + period.getEnd().toString());
     }
+
+    /**
+     * 第40条 谨慎的审计方法签名
+     */
+
+    @Test
+    public void rule40() throws Exception {
+    }
+
 }
