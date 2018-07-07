@@ -13,6 +13,7 @@ public class Period {
         }
         this.start = new Date(start.getTime());
         this.end = new Date(end.getTime());
+
     }
 
     public Date getStart() {
