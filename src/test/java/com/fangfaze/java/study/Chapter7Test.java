@@ -75,5 +75,17 @@ public class Chapter7Test {
 
     }
 
+    /**
+     * 第42条 慎用可变参数
+     */
+    @Test
+    public void rule15() throws Exception {
+        int[] numbers = {1, 2, 3};
+        String[] strings = {"1", "2", "3"};
+        System.out.println(Arrays.asList(numbers));
+        System.out.println(Arrays.asList(strings));
+        System.out.println(Arrays.toString(numbers));
+    }
+
 
 }
