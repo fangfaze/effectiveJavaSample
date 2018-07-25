@@ -1,6 +1,7 @@
 package com.fangfaze.java.study;
 
 import com.fangfaze.java.study.chapter7.CollectionClassifier;
+import com.fangfaze.java.study.chapter7.Lists;
 import com.fangfaze.java.study.chapter7.Period;
 import org.junit.Test;
 
@@ -79,7 +80,7 @@ public class Chapter7Test {
      * 第42条 慎用可变参数
      */
     @Test
-    public void rule15() throws Exception {
+    public void rule42() throws Exception {
         int[] numbers = {1, 2, 3};
         String[] strings = {"1", "2", "3"};
         System.out.println(Arrays.asList(numbers));
@@ -87,5 +88,16 @@ public class Chapter7Test {
         System.out.println(Arrays.toString(numbers));
     }
 
+    /**
+     * 第43条 返回零长度的数组火鸡和,而不是null
+     */
+
+    @Test
+    public void rule43() throws Exception {
+        String[] strings = Lists.getStrings();
+        for (String str : strings) {
+            System.out.println(str);
+        }
+    }
 
 }
